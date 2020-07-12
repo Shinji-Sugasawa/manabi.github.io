@@ -151,7 +151,7 @@
   // シーンに追加
   scene.add(directionalLight1);
 
- // 照明を作成SpotLight(              色, 光の強さ, 距離, 照射角, ボケ具合, 減衰率)
+ // 照明を作成SpotLight( 色, 光の強さ, 距離, 照射角, ボケ具合, 減衰率)
   var light = new THREE.SpotLight(0xffffff, 1, 100, Math.PI / 6, 0.1);
   light.position.set(10,10, -5);
   //light.target.position.set( 0, 5, -100 );
@@ -160,7 +160,6 @@
   //light.shadow.mapSize.width = 2048;
   //light.shadow.mapSize.height = 2048;
   scene.add(light);
-
 
 
   // 初回実行
