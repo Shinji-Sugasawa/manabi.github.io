@@ -91,14 +91,14 @@ var textureLoader = new THREE.TextureLoader();
 
 
     // 受け皿
-    var geometry = new THREE.SphereGeometry( 5, 32, 32 );
+    var geometry = new THREE.SphereGeometry( 1, 32, 32 );
     var planeMaterial = new THREE.MeshPhongMaterial({ color: 0xFFFFFF });
     var plane = new THREE.Mesh( geometry, planeMaterial );
     plane.receiveShadow = true;
 
     plane.rotation.z = 0.8;
     plane.rotation.x = 4.71
-    
+    plane.scale.set(0,0,0);
     plane.position.set( 0, -0.98,0)
 
     //全体のオブジェクト
