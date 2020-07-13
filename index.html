@@ -60,16 +60,24 @@
     //box.scale.y = ;
     box2.position.set(0,-1.2,0);
 
+    // テクスチャー読み込み
+    var textureLoader = new THREE.TextureLoader();  
+    var texture = textureLoader.load("mochi.jpg");
+    var mat = new THREE.MeshPhongMaterial();
+    mat.map = texture;
+
+
 // テクスチャー読み込み
 var textureLoader = new THREE.TextureLoader();  
-    var texture = textureLoader.load("watermelon.jpg");
+    var texture = textureLoader.load("watermelon.png");
     var mat = new THREE.MeshPhongMaterial();
     mat.map = texture;
   
-    //スイカ
+    //下から二番目の餅
     var sphereGeometry = new THREE.SphereGeometry( 0.8, 50, 50 ); 
     //半径、垂直方向の分割数、水平方向の分割数
     //var sphereMaterial = new THREE. MeshPhongMaterial( {color: 0XFFFFFF,} );   
+
     var moti1 = new THREE.Mesh( sphereGeometry, mat );
     moti1.castShadow = true; 
     moti1.receiveShadow = true;
@@ -83,7 +91,7 @@ var textureLoader = new THREE.TextureLoader();
     mat.map = texture;
     
 
-    /*//へた半径、垂直方向の分割数、水平方向の分割数
+    //へた半径、垂直方向の分割数、水平方向の分割数
     var sphereGeometry = new THREE.SphereGeometry( 0.3, 50, 50 ); 
     var sphereMaterial = new THREE.MeshPhongMaterial( {color: 0x99CF15} );   
     var sphere3 = new THREE.Mesh( sphereGeometry, sphereMaterial );
@@ -91,7 +99,7 @@ var textureLoader = new THREE.TextureLoader();
     sphere3.castShadow = true; 
     sphere3.receiveShadow = true;
     sphere3.scale.y = 0.8 ;
-    sphere3.position.set( 0, 0.4,0);*/
+    sphere3.position.set( 0, 0.4,0)
 
     //茎
     var cylinderGeometry = new THREE.CylinderGeometry( 0.04, 0.04, 0.2, 120 );
