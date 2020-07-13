@@ -66,6 +66,12 @@
     var mat = new THREE.MeshPhongMaterial();
     mat.map = texture;
 
+
+// テクスチャー読み込み
+var textureLoader = new THREE.TextureLoader();  
+    var texture = textureLoader.load("melon.jpg");
+    var mat = new THREE.MeshPhongMaterial();
+    mat.map = texture;
     //一番下の餅
     /*var sphereGeometry = new THREE.SphereGeometry( 1, 50, 50 ); 
     //半径、垂直方向の分割数、水平方向の分割数
@@ -80,6 +86,7 @@
     var sphereGeometry = new THREE.SphereGeometry( 0.8, 50, 50 ); 
     //半径、垂直方向の分割数、水平方向の分割数
     //var sphereMaterial = new THREE. MeshPhongMaterial( {color: 0XFFFFFF,} );   
+
     var moti1 = new THREE.Mesh( sphereGeometry, mat );
     moti1.castShadow = true; 
     moti1.receiveShadow = true;
