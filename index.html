@@ -91,7 +91,7 @@ var textureLoader = new THREE.TextureLoader();
 
 
     // 受け皿
-    var geometry = new THREE.SphereGeometry( 2, 32, 32 );
+    var geometry = new THREE.PlaneGeometry( 3, 3, 3 );
     var planeMaterial = new THREE.MeshPhongMaterial({ color: 0xFFFFFF });
     var plane = new THREE.Mesh( geometry, planeMaterial );
     plane.receiveShadow = true;
