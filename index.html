@@ -99,7 +99,8 @@ var textureLoader = new THREE.TextureLoader();
 
     // ざる
     var geometry = new THREE.PlaneGeometry( 3, 3, 3 );
-    var plane = new THREE.Mesh( geometry, mat );
+    var planeMaterial = new THREE.MeshPhongMaterial({ color: 0x00ff00 });
+    var plane = new THREE.Mesh( geometry, planeMaterial );
     plane.receiveShadow = true;
 
     plane.rotation.z = 0.8;
