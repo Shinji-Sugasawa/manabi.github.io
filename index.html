@@ -90,14 +90,14 @@ var textureLoader = new THREE.TextureLoader();
     cylinder.position.set( 0, 0.6, 0 );
 
 
-    // テクスチャー読み込み
+    // ざる用テクスチャー読み込み
     var textureLoader = new THREE.TextureLoader();  
     var texture = textureLoader.load("zaru.png");
     var mat = new THREE.MeshPhongMaterial();
     mat.map = texture;
   
 
-    // 敷物
+    // ざる
     var geometry = new THREE.PlaneGeometry( 3, 3, 3 );
     var plane = new THREE.Mesh( geometry, mat );
     plane.receiveShadow = true;
