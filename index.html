@@ -61,7 +61,7 @@ var textureLoader = new THREE.TextureLoader();
     mat.map = texture;
     // 砂浜
     var geometry = new THREE.PlaneGeometry( 3, 3, 3 );
-    var planeMaterial = new THREE.MeshPhongMaterial({ color: 0xffffff });
+    //var planeMaterial = new THREE.MeshPhongMaterial({ color: 0xffffff });
     var plane = new THREE.Mesh( geometry, mat );
     plane.receiveShadow = true;
 
