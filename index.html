@@ -32,55 +32,20 @@
   　camera.position.set( 0, 2, 0);
     camera.lookAt(new THREE.Vector3(0, 0, -5));
 
-   /* // テクスチャー読み込み
-    var textureLoader = new THREE.TextureLoader();  
-    var texture = textureLoader.load("wood-texture.jpg");
-    var mat = new THREE.MeshPhongMaterial();
-    mat.map = texture;
-
-
-
-    // 箱を作成
-    var geometry = new THREE.BoxGeometry(2, 2, 2);
-    //var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
-    //var box = new THREE.Mesh(geometry, material);
-    var box1 = new THREE.Mesh(geometry, mat);
-    box1.receiveShadow = true; 
-    box1.position.set(0,-2,0);
-   
-
-    var geometry1 = new THREE.BoxGeometry(3, 0.4, 3);
-    //var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
-    //var box = new THREE.Mesh(geometry, material);
-    var box2 = new THREE.Mesh(geometry1, mat);
-    box2.receiveShadow = true; 
-    //box.scale.y = ;
-    box2.position.set(0,-1.2,0);*/
-
-
 // テクスチャー読み込み
 var textureLoader = new THREE.TextureLoader();  
     var texture = textureLoader.load("watermelon.png");
     var mat = new THREE.MeshPhongMaterial();
     mat.map = texture;
   
-    //下から二番目の餅
+    //スイカ
     var sphereGeometry = new THREE.SphereGeometry( 0.8, 50, 50 ); 
     //半径、垂直方向の分割数、水平方向の分割数
     //var sphereMaterial = new THREE. MeshPhongMaterial( {color: 0XFFFFFF,} );   
-
     var melon = new THREE.Mesh( sphereGeometry, mat );
     melon.castShadow = true; 
     melon.receiveShadow = true;
     melon.position.set( 0, -0.2,0)
-
-    // テクスチャー読み込み
-    var textureLoader = new THREE.TextureLoader();  
-    var texture = textureLoader.load("orange.jpg");
-    var mat = new THREE.MeshPhongMaterial();
-    mat.map = texture;
-    
-
 
     //茎
     var cylinderGeometry = new THREE.CylinderGeometry( 0.04, 0.04, 0.2, 120 );
@@ -104,8 +69,6 @@ var textureLoader = new THREE.TextureLoader();
     //全体のオブジェクト
     //const all = new THREE.Object3D(); 
     const all = new THREE.Group()
-   // all.add(box1); // 箱1を追加 
-    //all.add(box2); // 箱2を追加 
     all.add(melon);
     all.add(plane);
     all.add(cylinder);
