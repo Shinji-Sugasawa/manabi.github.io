@@ -94,7 +94,7 @@
 
         // 毎フレーム時に実行されるループイベントです
         function tick() {
-          // レンダリング
+          // レンダリング・ビルボード
           renderer.render(scene, camera);
           sunplane.rotation.setFromRotationMatrix(camera.matrix);
           star1plane.rotation.setFromRotationMatrix(camera.matrix);
